@@ -23,7 +23,7 @@ export const TagsPage = () => {
                 return isPostsLoading ? (<Post isLoading={true} key={index} />) : (<Post
                     id={p._id}
                     title={p.title}
-                    imageUrl={p.imageUrl ? `http://localhost:9832${p.imageUrl}` : ""}
+                    imageUrl={p.imageUrl ? `${process.env.REACT_APP_API_URL}${p.imageUrl}` : ""}
                     // imageUrl="https://res.cloudinary.com/practicaldev/image/fetch/s--UnAfrEG8--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/icohm5g0axh9wjmu4oc3.png"
                     user={p.user}
                     createdAt={p.createdAt}
